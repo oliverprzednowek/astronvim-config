@@ -8,3 +8,6 @@ vim.api.nvim_create_autocmd("VimLeave", {
     end
 })
 
+require("nvim-treesitter.install").compilers= {"clang", "gcc"}
+
+vim.opt.scrolloff = 8
