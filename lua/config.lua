@@ -8,6 +8,7 @@ vim.api.nvim_create_autocmd("VimLeave", {
     end
 })
 
+-- if os is linux use clang as the treesitter so that it compiles dll's instead of so's
 if (not (vim.fn.has('macunix'))) then
     require("nvim-treesitter.install").compilers= {"clang", "gcc"}
 end
