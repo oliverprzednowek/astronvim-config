@@ -8,6 +8,8 @@ vim.api.nvim_create_autocmd("VimLeave", {
     end
 })
 
-require("nvim-treesitter.install").compilers= {"clang", "gcc"}
+if (not (vim.fn.has('macunix'))) then
+    require("nvim-treesitter.install").compilers= {"clang", "gcc"}
+end
 
 vim.opt.scrolloff = 8
