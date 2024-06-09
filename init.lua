@@ -18,3 +18,4 @@ end
 require "lazy_setup"
 require "polish"
 require "config"
+require "remap"
